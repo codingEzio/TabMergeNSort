@@ -7,7 +7,7 @@
     "This selection excludes internal records.",
     "Pattern checks are limited and do not prove absence of secrets.",
     "Desktop Safari does not support tabs.move, required for merge/sort; missing API is reported explicitly without changing tabs. Version metadata is not functional parity.",
-    "Reviewed font-name variant only: stable choices/defaults and all non-name font tables retained. Original owner source paths remain provenance; no installed/profile operation."
+    "Chrome 0.99.1 uses system fonts; prior public font assets remain in the source and package but are not loaded by the Chrome popup."
   ],
   "files": [
     ".gitignore",

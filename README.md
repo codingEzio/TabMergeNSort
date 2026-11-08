@@ -4,9 +4,12 @@
 
 [English](README.md) · [简体中文](README.zh-Hans.md) · [繁體中文](README.zh-TW.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Español](README.es.md)
 
+The Chrome popup uses system fonts. Previously published font assets remain in
+the source and package but are not loaded by this popup.
+
 ## Overview
 
-Chrome and desktop macOS Safari source version 0.99.0. This extension merges
+Chrome source version 0.99.1; retained desktop macOS Safari source version 0.99.0. This extension merges
 tabs and sorts the current window or all windows by URL or title.
 
 Safari functional limitation: Apple's

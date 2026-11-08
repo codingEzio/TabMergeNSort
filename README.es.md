@@ -6,7 +6,7 @@
 
 ## Resumen
 
-Combina pestañas y ordena la ventana actual o todas las ventanas por URL o título. El código Chrome y Safari de escritorio declara0.99.0.
+Combina pestañas y ordena la ventana actual o todas las ventanas por URL o título. Chrome declara 0.99.1 y Safari de escritorio conserva 0.99.0.
 
 ## Uso
 
