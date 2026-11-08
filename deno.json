@@ -19,15 +19,16 @@
   },
   "tasks": {
     "verify": "deno run --allow-read scripts/verify.ts",
-    "test": "deno test --allow-read --allow-net=127.0.0.1,localhost --ignore=tests/public_prepare_test.ts tests/",
+    "test": "deno test --allow-read --allow-net=127.0.0.1,localhost --ignore=tests/public_prepare_test.ts,tests/chrome_package_test.ts tests/",
     "check": "deno task verify && deno run --allow-read scripts/sync_endpoints.ts --check && deno run --allow-read scripts/sync_capture_menu.ts --check && deno run --allow-read scripts/sync_bookmark_source_policy.ts --check && deno task test",
-    "build": "deno task check && deno run --allow-read --allow-write=Local scripts/package.ts",
+    "build": "deno task check && deno run --allow-read --allow-write=Local scripts/package_chrome.ts",
     "safari:sync": "deno run --allow-read --allow-write scripts/sync_safari.ts && deno run --allow-read --allow-write scripts/generate_safari_hosts.ts",
     "safari:check": "deno run --allow-read scripts/sync_safari.ts --check && deno run --allow-read scripts/generate_safari_hosts.ts --check",
     "deps:sync": "deno run --allow-read --allow-write scripts/sync_dependencies.ts",
     "public:check": "deno run --allow-read --allow-run=git scripts/public_prepare.ts",
     "public:prepare": "deno run --allow-read --allow-run=git --allow-write=Local scripts/public_prepare.ts --prepare",
-    "maintenance": "deno task check && deno task public:test && deno task public:check",
-    "public:test": "deno test --allow-read --allow-write --allow-run=git,deno tests/public_prepare_test.ts"
+    "maintenance": "deno task check && deno task package:test && deno task public:test && deno task public:check",
+    "public:test": "deno test --allow-read --allow-write --allow-run=git,deno tests/public_prepare_test.ts",
+    "package:test": "deno test --allow-read --allow-write=Local --allow-run=deno tests/chrome_package_test.ts"
   }
 }

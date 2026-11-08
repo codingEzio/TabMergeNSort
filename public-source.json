@@ -7,7 +7,7 @@
     "This selection excludes internal records.",
     "Pattern checks are limited and do not prove absence of secrets.",
     "Desktop Safari does not support tabs.move, required for merge/sort; missing API is reported explicitly without changing tabs. Version metadata is not functional parity.",
-    "Chrome 0.99.1 uses system fonts; prior public font assets remain in the source and package but are not loaded by the Chrome popup."
+    "Chrome 0.99.1 uses system fonts; prior public font assets remain in source for Safari generation and are excluded from the Chrome package."
   ],
   "files": [
     ".gitignore",
@@ -280,6 +280,7 @@
     "scripts/install_safari.sh",
     "scripts/open_safari_settings.sh",
     "scripts/package.ts",
+    "scripts/package_chrome.ts",
     "scripts/paths.ts",
     "scripts/public_prepare.ts",
     "scripts/safari_status.sh",
@@ -428,6 +429,7 @@
     "shared/use-target-ui.js",
     "shared/use-target.js",
     "shared/via/transfer-source.js",
+    "tests/chrome_package_test.ts",
     "tests/public_prepare_test.ts",
     "tests/tab_merge_n_sort_test.ts",
     "vendor/prometheus/bookmark_intake.ts",

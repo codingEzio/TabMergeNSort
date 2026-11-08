@@ -4,7 +4,7 @@ Chrome 源码版本 0.99.1，保留的桌面 macOS Safari 源码版本 0.99.0。
 排序当前窗口或全部窗口。Chrome 使用 Chrome「加载已解压的扩展程序」选择本项目的
 `extension_chrome/`，无需工作区目录或软链接。保留既有扩展身份和存储键。
 
-Chrome 界面使用系统字体。此前发布的字体资源仍保留在源码和包内，但此界面不会加载。
+Chrome 界面使用系统字体。此前发布的字体资源仍保留在源码中供 Safari 生成使用，但不包含在 Chrome 包中。
 
 Safari 功能限制：Apple 的
 [Web Extension 兼容性说明](https://developer.apple.com/documentation/safariservices/assessing-your-safari-web-extension-s-browser-compatibility)

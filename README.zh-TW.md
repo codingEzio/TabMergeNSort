@@ -6,7 +6,7 @@ Chrome 原始碼版本 0.99.1，保留的桌面 macOS Safari 原始碼版本 0.9
 排序目前視窗或所有視窗。Chrome 使用 Chrome「載入未封裝項目」選擇本專案的
 `extension_chrome/`，無需工作區目錄或符號連結。保留既有擴充身分與儲存鍵。
 
-Chrome 介面使用系統字型。先前發布的字型資產仍保留於原始碼與套件中，但此介面不會載入。
+Chrome 介面使用系統字型。先前發布的字型資產仍保留於原始碼中供 Safari 生成使用，但不包含在 Chrome 套件中。
 
 Safari 功能限制：Apple 的
 [Web Extension 相容性說明](https://developer.apple.com/documentation/safariservices/assessing-your-safari-web-extension-s-browser-compatibility)
