@@ -1,0 +1,56 @@
+{
+  "extName": { "message": "Tab Merge N Sort" },
+  "extDescription": {
+    "message": "合併分頁，或依網址或標題排序目前視窗或所有視窗。"
+  },
+  "sortBy": { "message": "排序方式" },
+  "url": { "message": "網址" },
+  "title": { "message": "標題" },
+  "merge": { "message": "合併" },
+  "sort": { "message": "排序" },
+  "sortAll": { "message": "全部排序" },
+  "both": { "message": "合併並排序" },
+  "working": { "message": "處理中…" },
+  "mergeNothing": { "message": "沒有可合併的分頁。" },
+  "mergeDone": {
+    "message": "已合併分頁：$COUNT$。",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "sortDone": {
+    "message": "已依 $SORT$ 排序分頁：$COUNT$。",
+    "placeholders": {
+      "sort": { "content": "$2" },
+      "count": { "content": "$1" }
+    }
+  },
+  "sortAllDone": {
+    "message": "已依 $SORT$ 排序 $WINDOWS$ 個視窗中的 $COUNT$ 個分頁。",
+    "placeholders": {
+      "count": { "content": "$1" },
+      "windows": { "content": "$2" },
+      "sort": { "content": "$3" }
+    }
+  },
+  "bothDone": {
+    "message": "已合併：$MERGED$；已依 $SORT$ 排序：$SORTED$。",
+    "placeholders": {
+      "merged": { "content": "$1" },
+      "sorted": { "content": "$2" },
+      "sort": { "content": "$3" }
+    }
+  },
+  "closedDuringOperation": {
+    "message": "操作期間關閉的分頁：$COUNT$。",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "errorWindow": { "message": "目前視窗無法使用。" },
+  "errorWindowType": { "message": "請在一般瀏覽器視窗中使用此操作。" },
+  "errorOrder": { "message": "視窗順序與預定結果不同；未再變更其他分頁。" },
+  "errorUnsupported": { "message": "此瀏覽器不支援移動分頁，無法合併或排序。" },
+  "errorAction": { "message": "未知的操作。" },
+  "errorRuntime": { "message": "擴充功能背景工作沒有回應。" },
+  "sortReadFailed": { "message": "無法讀取已儲存的排序方式；目前選用網址。" },
+  "savingSort": { "message": "正在儲存排序方式…" },
+  "sortSaved": { "message": "排序方式已儲存。" },
+  "sortSaveFailed": { "message": "無法儲存排序方式。" }
+}

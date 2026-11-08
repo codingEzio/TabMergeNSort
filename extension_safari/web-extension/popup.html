@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Tab Merge N Sort</title>
+    <link rel="stylesheet" href="popup.css">
+    <script src="ui-interactions.js" defer></script>
+    <script src="browser-emoji.js" defer></script>
+  <script src="ui-typography.js" defer></script>
+</head>
+  <body>
+    <div class="popup">
+      <header>
+        <img src="icons/icon-32.png" width="24" height="24" alt="">
+        <strong data-i18n="extName">Tab Merge N Sort</strong>
+        <span class="fill"></span>
+        <small id="version"></small>
+      </header>
+      <main>
+        <label class="row" for="sort-by">
+          <span data-i18n="sortBy">Sort by</span>
+          <span class="fill"></span>
+          <select id="sort-by" name="sort-by">
+            <option value="url" data-i18n="url">URL</option>
+            <option value="title" data-i18n="title">Title</option>
+          </select>
+        </label>
+        <div class="actions">
+          <button type="button" data-action="merge"
+            data-i18n="merge">Merge</button>
+          <button type="button" data-action="sort"
+            data-i18n="sort">Sort</button>
+          <button type="button" data-action="sortall"
+            data-i18n="sortAll">Sort All</button>
+          <button type="button" class="primary" data-action="both"
+            data-i18n="both">Merge + Sort</button>
+        </div>
+      </main>
+      <footer>
+        <p id="status" class="status" role="status" aria-live="polite"></p>
+      </footer>
+    </div>
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

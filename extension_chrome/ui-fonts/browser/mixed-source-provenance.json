@@ -1,0 +1,354 @@
+{
+  "version": "1.1.0",
+  "recipe": {
+    "schemaVersion": 1,
+    "version": "1.1.0",
+    "fonts": [
+      {
+        "family": "GeistMixUI_NerdAndZhAndEmoji3D",
+        "source": "pixel",
+        "axes": {
+          "ELSH": 0
+        }
+      },
+      {
+        "family": "GeistMixCode_NerdAndZhAndEmoji3D",
+        "source": "mono",
+        "variableWeight": [
+          100,
+          400,
+          900
+        ]
+      },
+      {
+        "family": "Doto500MixUI_NerdAndZhAndEmoji3D",
+        "source": "doto",
+        "axes": {
+          "wght": 500,
+          "ROND": 0
+        },
+        "height": 1.1,
+        "heightAxis": {
+          "tag": "HGHT",
+          "values": [
+            105,
+            110,
+            115,
+            120
+          ],
+          "default": 110
+        }
+      },
+      {
+        "family": "Doto700MixUI_NerdAndZhAndEmoji3D",
+        "source": "doto",
+        "axes": {
+          "wght": 700,
+          "ROND": 0
+        },
+        "height": 1.1,
+        "heightAxis": {
+          "tag": "HGHT",
+          "values": [
+            105,
+            110,
+            115,
+            120
+          ],
+          "default": 110
+        }
+      },
+      {
+        "family": "Doto900MixUI_NerdAndZhAndEmoji3D",
+        "source": "doto",
+        "axes": {
+          "wght": 900,
+          "ROND": 0
+        },
+        "height": 1.1,
+        "heightAxis": {
+          "tag": "HGHT",
+          "values": [
+            105,
+            110,
+            115,
+            120
+          ],
+          "default": 110
+        }
+      }
+    ],
+    "emoji": {
+      "sourcePpem": 55,
+      "targetPpem": 28,
+      "coverage": "all source cmap and GSUB; no repertoire subsetting",
+      "maxFontBytes": 16000000,
+      "pngPolicy": "Lanczos RGBA at28PPEM, per-image256-color alpha palette; all source glyphs retained"
+    },
+    "pixelSourceSha256": "dcde0e2ae59aad779e71ee3fa45ade3a7146c2498024fdbb79c8cb619e60a238",
+    "chinese": "original Cubic 11 geometry at normalized UPEM; no synthetic weight",
+    "doto": "original horizontal metrics; y scale only, baseline unchanged",
+    "layoutPolicy": "Full emoji ccmp lookups apply to every script/language ccmp record for Core Text and HarfBuzz",
+    "symbolAliases": {
+      "EA00": "F099"
+    }
+  },
+  "emoji": {
+    "config": {
+      "sourcePpem": 55,
+      "targetPpem": 28,
+      "coverage": "all source cmap and GSUB; no repertoire subsetting",
+      "maxFontBytes": 16000000,
+      "pngPolicy": "Lanczos RGBA at28PPEM, per-image256-color alpha palette; all source glyphs retained"
+    },
+    "sourceSha256": "81fd6b01bde93e4d7afa0aab4fbcfd915b2e9e1b0e55188c6e8e1a2571b14ab3",
+    "sourceBytes": 23903668,
+    "sha256": "e1173c61124f3579cc4f6c4f96354a2c053462e014217736fc840dd4f3c08554",
+    "bytes": 7025596,
+    "bitmapImages": 3994,
+    "cmapUnchanged": true,
+    "gsubUnchanged": true
+  },
+  "inputs": {
+    "pixel": {
+      "file": "sources/geist-mixed/GeistPixel-Variable.ttf",
+      "sha256": "dcde0e2ae59aad779e71ee3fa45ade3a7146c2498024fdbb79c8cb619e60a238"
+    },
+    "mono": {
+      "file": "sources/geist-mixed/GeistMono-Variable.ttf",
+      "sha256": "87c2aff9723544a9adaea19d92e42a33705c9723624801b6e0224c2206a6af0d"
+    },
+    "doto": {
+      "file": "sources/Doto-Variable.ttf",
+      "sha256": "6f4fe7d37853b91df3698daa84cde2dbe1c9695d88c986e6510134910337d426"
+    },
+    "cubic11": {
+      "file": "sources/Cubic_11.ttf",
+      "sha256": "0193f5f033612496df6b45ee92ac3b335bc6a5a24ff95da55ca87b33e57dcf62"
+    },
+    "nerd": {
+      "file": "sources/geist-mixed/SymbolsNerdFontMono-Regular.ttf",
+      "sha256": "fe471e538392f51910faab985fa8e192a39dd3426125edd15b71b3680df0e749"
+    }
+  },
+  "sources": {
+    "text": [
+      {
+        "file": "GeistMono-Variable.ttf",
+        "url": "https://raw.githubusercontent.com/vercel/geist-font/a73329da8fc62afc917f796555202e4997f79b7c/fonts/GeistMono/variable/GeistMono%5Bwght%5D.ttf",
+        "sha256": "87c2aff9723544a9adaea19d92e42a33705c9723624801b6e0224c2206a6af0d",
+        "bytes": 171968
+      },
+      {
+        "file": "Geist-OFL.txt",
+        "url": "https://raw.githubusercontent.com/vercel/geist-font/a73329da8fc62afc917f796555202e4997f79b7c/OFL.txt",
+        "sha256": "c683bfbcc7e087f5d37a54ef628f10387c451a83ddc459b151403a164ac46c90",
+        "bytes": 4383
+      },
+      {
+        "file": "SymbolsNerdFontMono-Regular.ttf",
+        "url": "https://raw.githubusercontent.com/ryanoasis/nerd-fonts/v3.5.1/patched-fonts/NerdFontsSymbolsOnly/SymbolsNerdFontMono-Regular.ttf",
+        "sha256": "fe471e538392f51910faab985fa8e192a39dd3426125edd15b71b3680df0e749",
+        "bytes": 2610012
+      },
+      {
+        "file": "GeistPixel-Variable.ttf",
+        "url": "https://raw.githubusercontent.com/google/fonts/c180a5f9711fb8ec0070fab5ad89c30f231f6e22/ofl/geistpixel/GeistPixel%5BELSH%5D.ttf",
+        "sha256": "dcde0e2ae59aad779e71ee3fa45ade3a7146c2498024fdbb79c8cb619e60a238",
+        "bytes": 3657104
+      },
+      {
+        "file": "GeistPixelVariable-OFL.txt",
+        "url": "https://raw.githubusercontent.com/google/fonts/c180a5f9711fb8ec0070fab5ad89c30f231f6e22/ofl/geistpixel/OFL.txt",
+        "sha256": "021caa749f89fecd7c2e40a50499de29e84d2bc19251659b47d499c2fbfffc17",
+        "bytes": 4384
+      }
+    ],
+    "doto": {
+      "path": "sources/Doto-Variable.ttf",
+      "sha256": "6f4fe7d37853b91df3698daa84cde2dbe1c9695d88c986e6510134910337d426",
+      "repository": "https://github.com/google/fonts",
+      "revision": "9710da1eacb3be272583c3224dcb70f9da6eadbb",
+      "url": "https://raw.githubusercontent.com/google/fonts/9710da1eacb3be272583c3224dcb70f9da6eadbb/ofl/doto/Doto%5BROND%2Cwght%5D.ttf",
+      "label": "Doto",
+      "copyright": "Copyright 2024-2024 The Doto Project Authors (https://github.com/oliverlalan/Doto)",
+      "license": {
+        "spdx": "OFL-1.1",
+        "path": "sources/OFL.txt",
+        "sha256": "26a7b58bdba6cda8a78ca6e8b3791d8013b8abc6d5e6519f84193893aee02020",
+        "url": "https://raw.githubusercontent.com/google/fonts/9710da1eacb3be272583c3224dcb70f9da6eadbb/ofl/doto/OFL.txt",
+        "reservedNames": [],
+        "review": {
+          "modifiedFonts": true,
+          "embedding": true,
+          "redistribution": true,
+          "derivedLicense": "OFL-1.1",
+          "reviewedAt": "2026-10-12",
+          "evidence": "Pinned original OFL text; Cubic naming conditions also documented by upstream README https://github.com/ACh-K/Cubic-11"
+        }
+      }
+    },
+    "cubic11": {
+      "path": "sources/Cubic_11.ttf",
+      "sha256": "0193f5f033612496df6b45ee92ac3b335bc6a5a24ff95da55ca87b33e57dcf62",
+      "repository": "https://github.com/ACh-K/Cubic-11",
+      "revision": "4c566f7d6cc5c05ee360fe9cff56b5da1fcafd4d",
+      "url": "https://raw.githubusercontent.com/ACh-K/Cubic-11/4c566f7d6cc5c05ee360fe9cff56b5da1fcafd4d/fonts/ttf/Cubic_11.ttf",
+      "label": "Cubic 11",
+      "copyright": "[Cubic 11]\nCopyright (c) 2022-2025 ACh\nCopyright (c) 2022 Cubic 11 Project Authors\r\nThese fonts are free software.\r\nUnlimited permission is granted to use, copy, and distribute them, with or without modification, either commercially or noncommercially.\r\nTHESE FONTS ARE PROVIDED \"AS IS\" WITHOUT WARRANTY.\r\n\r\n\r\n\r\n[JF Dot M+H 12]\r\nCopyright(c) 2005 M+ FONTS PROJECT\r\n[M+ BITMAP FONTS]\r\nCopyright (C) 2002-2004 COZ\r\nThese fonts are free software.\r\nUnlimited permission is granted to use, copy, and distribute it, with or without modification, either commercially and noncommercially.\r\nTHESE FONTS ARE PROVIDED \"AS IS\" WITHOUT WARRANTY.\r\n\r\n",
+      "license": {
+        "spdx": "OFL-1.1",
+        "path": "sources/Cubic11-OFL.txt",
+        "sha256": "2b6e5938e5cffa0b9e183bd05f8c363e174e7ebed1a0556e2855fd1707fa2188",
+        "url": "https://raw.githubusercontent.com/ACh-K/Cubic-11/4c566f7d6cc5c05ee360fe9cff56b5da1fcafd4d/fonts/ttf/OFL.txt",
+        "reservedNames": [
+          "Cubic",
+          "俐方體"
+        ],
+        "review": {
+          "modifiedFonts": true,
+          "embedding": true,
+          "redistribution": true,
+          "derivedLicense": "OFL-1.1",
+          "reviewedAt": "2026-10-12",
+          "evidence": "Pinned original OFL text; Cubic naming conditions also documented by upstream README https://github.com/ACh-K/Cubic-11"
+        }
+      }
+    },
+    "emoji": {
+      "path": "sources/Noto3D-64.ttf",
+      "sha256": "81fd6b01bde93e4d7afa0aab4fbcfd915b2e9e1b0e55188c6e8e1a2571b14ab3",
+      "label": "Noto 3D Emoji, original 64 px strike",
+      "repository": "https://github.com/googlefonts/noto-emoji",
+      "revision": "v2026-09-24-unicode18_0",
+      "url": "https://media.githubusercontent.com/media/googlefonts/noto-emoji/v2026-09-24-unicode18_0/3D/fonts/Noto-3D-128.ttf",
+      "upstreamSha256": "6f4312a7c02d0c9de88095ee65e320ffe9316d2d8d56e4c515e7181fca5ed439",
+      "upstreamBytes": 147882884,
+      "preparation": "Retain original strike 55 PPEM / 64 px only. No image resampling, glyph/cmap/GSUB subsetting or name edits.",
+      "copyright": "Copyright 2022 Google Inc.",
+      "license": {
+        "spdx": "OFL-1.1",
+        "path": "sources/Noto3D-OFL.txt",
+        "sha256": "6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2",
+        "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/v2026-09-24-unicode18_0/3D/fonts/LICENSE",
+        "reservedNames": [],
+        "reviewedAt": "2026-10-15",
+        "redistribution": true,
+        "embedding": true,
+        "modifiedFonts": true
+      }
+    }
+  },
+  "assets": [
+    {
+      "family": "GeistMixUI_NerdAndZhAndEmoji3D",
+      "ttf": "GeistMixUI_NerdAndZhAndEmoji3D.ttf",
+      "woff2": "GeistMixUI_NerdAndZhAndEmoji3D.woff2",
+      "ttfBytes": 12858408,
+      "woff2Bytes": 6076208,
+      "ttfSha256": "42ae04881ebd58790fb69112b504ab5acf7571a17f2caa7578e121a166732ac1",
+      "woff2Sha256": "759d1687d4256b56e6c9fd43d00b058b73fac87cb60711f764da448ff4b93800",
+      "variableWeight": null,
+      "commonScriptEmojiComposition": true,
+      "heightAxis": null,
+      "sourceGeometryAndHorizontalMetricsVerified": true,
+      "emojiCmapCodepoints": 1512,
+      "bitmapGlyphs": 3994
+    },
+    {
+      "family": "GeistMixCode_NerdAndZhAndEmoji3D",
+      "ttf": "GeistMixCode_NerdAndZhAndEmoji3D.ttf",
+      "woff2": "GeistMixCode_NerdAndZhAndEmoji3D.woff2",
+      "ttfBytes": 12219892,
+      "woff2Bytes": 6115020,
+      "ttfSha256": "85e36e8ce642206bbbc87fe98eef6322246b39b5e70aa5ff7f008579bb7ca853",
+      "woff2Sha256": "63b77009cfdc79277ab9fe7d5eaa0ecf65bd5296a07d5dda6b4933bb92fa1a31",
+      "variableWeight": [
+        100,
+        400,
+        900
+      ],
+      "commonScriptEmojiComposition": true,
+      "heightAxis": null,
+      "sourceGeometryAndHorizontalMetricsVerified": true,
+      "emojiCmapCodepoints": 1512,
+      "bitmapGlyphs": 3994
+    },
+    {
+      "family": "Doto500MixUI_NerdAndZhAndEmoji3D",
+      "ttf": "Doto500MixUI_NerdAndZhAndEmoji3D.ttf",
+      "woff2": "Doto500MixUI_NerdAndZhAndEmoji3D.woff2",
+      "ttfBytes": 12412328,
+      "woff2Bytes": 6056460,
+      "ttfSha256": "d557a016f10edaba2c435883b85ccc7c48561a6102f61da8c29d6b99c9c2a047",
+      "woff2Sha256": "1f22b1b9728fb6acd8cdb60c7b00cf0e2598273800e3dbc9385cad5ab9b192e2",
+      "variableWeight": null,
+      "commonScriptEmojiComposition": true,
+      "heightAxis": {
+        "tag": "HGHT",
+        "values": [
+          105,
+          110,
+          115,
+          120
+        ],
+        "default": 110
+      },
+      "sourceGeometryAndHorizontalMetricsVerified": true,
+      "emojiCmapCodepoints": 1512,
+      "bitmapGlyphs": 3994
+    },
+    {
+      "family": "Doto700MixUI_NerdAndZhAndEmoji3D",
+      "ttf": "Doto700MixUI_NerdAndZhAndEmoji3D.ttf",
+      "woff2": "Doto700MixUI_NerdAndZhAndEmoji3D.woff2",
+      "ttfBytes": 12412320,
+      "woff2Bytes": 6056552,
+      "ttfSha256": "8993be1e71930b5a1f02280e9194b08f8a88fe3901343ff886333b0e340f55ab",
+      "woff2Sha256": "5ffae329a1bc74625762ab3189a0587e183868f85a91fa4cd2fbd83c2f435a17",
+      "variableWeight": null,
+      "commonScriptEmojiComposition": true,
+      "heightAxis": {
+        "tag": "HGHT",
+        "values": [
+          105,
+          110,
+          115,
+          120
+        ],
+        "default": 110
+      },
+      "sourceGeometryAndHorizontalMetricsVerified": true,
+      "emojiCmapCodepoints": 1512,
+      "bitmapGlyphs": 3994
+    },
+    {
+      "family": "Doto900MixUI_NerdAndZhAndEmoji3D",
+      "ttf": "Doto900MixUI_NerdAndZhAndEmoji3D.ttf",
+      "woff2": "Doto900MixUI_NerdAndZhAndEmoji3D.woff2",
+      "ttfBytes": 12406872,
+      "woff2Bytes": 6058900,
+      "ttfSha256": "cb9c3ba884b1e44010e466f8785d62bb45dd68dfd27cf62b1d3df8ee44633124",
+      "woff2Sha256": "4e3ec522b5cd298a957174275440dd9a2204579e5b7382018e5c43670da641b2",
+      "variableWeight": null,
+      "commonScriptEmojiComposition": true,
+      "heightAxis": {
+        "tag": "HGHT",
+        "values": [
+          105,
+          110,
+          115,
+          120
+        ],
+        "default": 110
+      },
+      "sourceGeometryAndHorizontalMetricsVerified": true,
+      "emojiCmapCodepoints": 1512,
+      "bitmapGlyphs": 3994
+    }
+  ],
+  "publicNaming": {
+    "receipt": "name-change.json",
+    "sourceProvenanceSha256": "48ad7a5b855f4e6061e8e3608f78dc24a182798e90bcc7d7baa0dd838fdd04af"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "extName": { "message": "Tab Merge N Sort" },
+  "extDescription": {
+    "message": "Объединяйте вкладки или сортируйте текущее либо все окна по URL или названию."
+  },
+  "sortBy": { "message": "Сортировать по" },
+  "url": { "message": "URL" },
+  "title": { "message": "Название" },
+  "merge": { "message": "Объединить" },
+  "sort": { "message": "Сортировать" },
+  "sortAll": { "message": "Сортировать все" },
+  "both": { "message": "Объединить и сортировать" },
+  "working": { "message": "Выполняется…" },
+  "mergeNothing": { "message": "Нет вкладок для объединения." },
+  "mergeDone": {
+    "message": "Объединено вкладок: $COUNT$.",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "sortDone": {
+    "message": "Отсортировано по $SORT$: $COUNT$.",
+    "placeholders": {
+      "sort": { "content": "$2" },
+      "count": { "content": "$1" }
+    }
+  },
+  "sortAllDone": {
+    "message": "Отсортировано вкладок: $COUNT$ в окнах: $WINDOWS$ по $SORT$.",
+    "placeholders": {
+      "count": { "content": "$1" },
+      "windows": { "content": "$2" },
+      "sort": { "content": "$3" }
+    }
+  },
+  "bothDone": {
+    "message": "Объединено: $MERGED$; отсортировано по $SORT$: $SORTED$.",
+    "placeholders": {
+      "merged": { "content": "$1" },
+      "sorted": { "content": "$2" },
+      "sort": { "content": "$3" }
+    }
+  },
+  "closedDuringOperation": {
+    "message": "Вкладок закрыто во время операции: $COUNT$.",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "errorWindow": { "message": "Текущее окно недоступно." },
+  "errorWindowType": {
+    "message": "Запустите это действие в обычном окне браузера."
+  },
+  "errorOrder": {
+    "message": "Порядок окна не совпал с планом. Другие вкладки не изменены."
+  },
+  "errorUnsupported": { "message": "Этот браузер не поддерживает перемещение вкладок. Объединение и сортировка недоступны." },
+  "errorAction": { "message": "Неизвестное действие." },
+  "errorRuntime": { "message": "Фоновая служба расширения не ответила." },
+  "sortReadFailed": {
+    "message": "Не удалось прочитать сохранённую сортировку. Выбран URL."
+  },
+  "savingSort": { "message": "Сохранение сортировки…" },
+  "sortSaved": { "message": "Сортировка сохранена." },
+  "sortSaveFailed": { "message": "Не удалось сохранить сортировку." }
+}

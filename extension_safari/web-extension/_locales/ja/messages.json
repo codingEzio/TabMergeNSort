@@ -1,0 +1,64 @@
+{
+  "extName": { "message": "Tab Merge N Sort" },
+  "extDescription": {
+    "message": "タブをまとめるか、現在またはすべてのウィンドウを URL またはタイトルで並べ替えます。"
+  },
+  "sortBy": { "message": "並べ替え基準" },
+  "url": { "message": "URL" },
+  "title": { "message": "タイトル" },
+  "merge": { "message": "まとめる" },
+  "sort": { "message": "並べ替え" },
+  "sortAll": { "message": "すべて並べ替え" },
+  "both": { "message": "まとめて並べ替え" },
+  "working": { "message": "処理中…" },
+  "mergeNothing": { "message": "まとめるタブはありません。" },
+  "mergeDone": {
+    "message": "まとめたタブ数：$COUNT$。",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "sortDone": {
+    "message": "$SORT$ 順に並べ替えたタブ数：$COUNT$。",
+    "placeholders": {
+      "sort": { "content": "$2" },
+      "count": { "content": "$1" }
+    }
+  },
+  "sortAllDone": {
+    "message": "$WINDOWS$ 個のウィンドウの $COUNT$ 個のタブを $SORT$ で並べ替えました。",
+    "placeholders": {
+      "count": { "content": "$1" },
+      "windows": { "content": "$2" },
+      "sort": { "content": "$3" }
+    }
+  },
+  "bothDone": {
+    "message": "$MERGED$ 個のタブをまとめ、$SORT$ 順に $SORTED$ 個を並べ替えました。",
+    "placeholders": {
+      "merged": { "content": "$1" },
+      "sorted": { "content": "$2" },
+      "sort": { "content": "$3" }
+    }
+  },
+  "closedDuringOperation": {
+    "message": "操作中に閉じたタブ数：$COUNT$。",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "errorWindow": { "message": "現在のウィンドウを利用できません。" },
+  "errorWindowType": {
+    "message": "通常のブラウザーウィンドウでこの操作を実行してください。"
+  },
+  "errorOrder": {
+    "message": "ウィンドウの順序が予定と一致しません。他の変更は行いませんでした。"
+  },
+  "errorUnsupported": { "message": "このブラウザーはタブの移動に対応していません。結合と並べ替えは利用できません。" },
+  "errorAction": { "message": "不明な操作です。" },
+  "errorRuntime": {
+    "message": "拡張機能のバックグラウンドから応答がありません。"
+  },
+  "sortReadFailed": {
+    "message": "保存した並べ替え基準を読み込めません。URL を選択しました。"
+  },
+  "savingSort": { "message": "並べ替え基準を保存中…" },
+  "sortSaved": { "message": "並べ替え基準を保存しました。" },
+  "sortSaveFailed": { "message": "並べ替え基準を保存できませんでした。" }
+}

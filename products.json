@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 3,
+  "products": [
+    {
+      "id": ".",
+      "roots": [
+        "extension_chrome"
+      ]
+    }
+  ],
+  "safariBuilds": [
+    {
+      "id": "tab-merge-n-sort",
+      "sourceRoot": "extension_chrome",
+      "webRoot": "extension_safari/web-extension",
+      "hostRoot": "extension_safari/host/Z-TabMergeNSort",
+      "appName": "Z-TabMergeNSort",
+      "installApp": "Z-TabMergeNSort.app",
+      "hostBundleId": "app.alex.z-tab-merge-n-sort",
+      "extensionBundleId": "app.alex.z-tab-merge-n-sort.extension",
+      "handler": "default",
+      "iconRoot": "design/generated/apple-static/default"
+    }
+  ],
+  "product": "tab_merge_n_sort",
+  "variant": null
+}

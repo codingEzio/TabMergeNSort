@@ -1,0 +1,5 @@
+Use case: new production icon identity. Product: tabs.
+Recognition: Two windows converging to one line: merge and sort tabs.
+All extension icons are rebuilt for the new A-Prometheus module, not copied from the retired products. New editable vector geometry is the canonical source. Keep the chosen NO black/white concept for no, but redraw its lettering. The Active mark means active Journal, not a starred-data field.
+Composition: bold compact geometry, rounded joins, clear negative space. Color #c8912d. Manifest 16/32/48/128; dedicated transparent toolbar 16/24/32 with a dark contrast contour. No decorative platform tile except no's meaningful black identity field. No tiny text or extra glyphs.
+Check 16px recognition and light/dark/neutral backgrounds. No runtime theme machinery or Safari artwork build is implied. Prepared design defaults remain reviewable; installed-browser proof belongs to the later implementation owner.

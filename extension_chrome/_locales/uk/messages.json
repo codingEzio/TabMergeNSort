@@ -1,0 +1,62 @@
+{
+  "extName": { "message": "Tab Merge N Sort" },
+  "extDescription": {
+    "message": "Об’єднуйте вкладки або сортуйте поточне чи всі вікна за URL або назвою."
+  },
+  "sortBy": { "message": "Сортувати за" },
+  "url": { "message": "URL" },
+  "title": { "message": "Назва" },
+  "merge": { "message": "Об’єднати" },
+  "sort": { "message": "Сортувати" },
+  "sortAll": { "message": "Сортувати всі" },
+  "both": { "message": "Об’єднати й сортувати" },
+  "working": { "message": "Виконується…" },
+  "mergeNothing": { "message": "Немає вкладок для об’єднання." },
+  "mergeDone": {
+    "message": "Об’єднано вкладок: $COUNT$.",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "sortDone": {
+    "message": "Відсортовано за $SORT$: $COUNT$.",
+    "placeholders": {
+      "sort": { "content": "$2" },
+      "count": { "content": "$1" }
+    }
+  },
+  "sortAllDone": {
+    "message": "Відсортовано вкладок: $COUNT$ у вікнах: $WINDOWS$ за $SORT$.",
+    "placeholders": {
+      "count": { "content": "$1" },
+      "windows": { "content": "$2" },
+      "sort": { "content": "$3" }
+    }
+  },
+  "bothDone": {
+    "message": "Об’єднано: $MERGED$; відсортовано за $SORT$: $SORTED$.",
+    "placeholders": {
+      "merged": { "content": "$1" },
+      "sorted": { "content": "$2" },
+      "sort": { "content": "$3" }
+    }
+  },
+  "closedDuringOperation": {
+    "message": "Вкладок закрито під час операції: $COUNT$.",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "errorWindow": { "message": "Поточне вікно недоступне." },
+  "errorWindowType": {
+    "message": "Відкрийте звичайне вікно браузера, щоб виконати цю дію."
+  },
+  "errorOrder": {
+    "message": "Порядок вікна не збігся з планом. Інші вкладки не змінено."
+  },
+  "errorUnsupported": { "message": "Цей браузер не підтримує переміщення вкладок. Об’єднання та сортування недоступні." },
+  "errorAction": { "message": "Невідома дія." },
+  "errorRuntime": { "message": "Фонова служба розширення не відповіла." },
+  "sortReadFailed": {
+    "message": "Не вдалося прочитати збережений порядок. Вибрано URL."
+  },
+  "savingSort": { "message": "Збереження порядку…" },
+  "sortSaved": { "message": "Порядок збережено." },
+  "sortSaveFailed": { "message": "Не вдалося зберегти порядок." }
+}

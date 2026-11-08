@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "__MSG_extName__",
+  "version": "0.99.0",
+  "description": "__MSG_extDescription__",
+  "default_locale": "en",
+  "permissions": [
+    "tabs",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "Tab Merge N Sort",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/toolbar-light-16.png",
+      "24": "icons/toolbar-light-24.png",
+      "32": "icons/toolbar-light-32.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnCDXmX79EY2HQ1JPHLE+qGwjfvtgARuU1Trf+K1Zl/583tOGPuz9c/d3olJYkthyBmNecjTIR899X9TcCtYh4iop2yREYCTpmhYr6M2ilBHXiC18wg7orj7IyMdjFYDf8CwsYk4s+p/rP2gjvxJNvxwoi23cTDurhxgf8fKrAZOyCd+svweG0hYTxXhZIlD2l61TSTltyXA5HKz4p4AcS5081I31wHwe+3WtlyWoiOosdVhCvo+wnq4AdjLKSevu9ediafOjiIBi4oCZDfNAWu9smX41QCOHxgrkk9rngHfbuy6a489nsEzOO7743JX/AS6bSvyiNJDT8VzNqEhfoQIDAQAB"
+}

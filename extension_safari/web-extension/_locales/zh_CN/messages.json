@@ -1,0 +1,56 @@
+{
+  "extName": { "message": "Tab Merge N Sort" },
+  "extDescription": {
+    "message": "合并标签页，或按网址或标题排列当前窗口或所有窗口。"
+  },
+  "sortBy": { "message": "排序依据" },
+  "url": { "message": "网址" },
+  "title": { "message": "标题" },
+  "merge": { "message": "合并" },
+  "sort": { "message": "排序" },
+  "sortAll": { "message": "全部排序" },
+  "both": { "message": "合并并排序" },
+  "working": { "message": "正在处理…" },
+  "mergeNothing": { "message": "没有可合并的标签页。" },
+  "mergeDone": {
+    "message": "已合并的标签页：$COUNT$。",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "sortDone": {
+    "message": "已按 $SORT$ 排序的标签页：$COUNT$。",
+    "placeholders": {
+      "sort": { "content": "$2" },
+      "count": { "content": "$1" }
+    }
+  },
+  "sortAllDone": {
+    "message": "已按 $SORT$ 排序 $WINDOWS$ 个窗口中的 $COUNT$ 个标签页。",
+    "placeholders": {
+      "count": { "content": "$1" },
+      "windows": { "content": "$2" },
+      "sort": { "content": "$3" }
+    }
+  },
+  "bothDone": {
+    "message": "已合并：$MERGED$；已按 $SORT$ 排序：$SORTED$。",
+    "placeholders": {
+      "merged": { "content": "$1" },
+      "sorted": { "content": "$2" },
+      "sort": { "content": "$3" }
+    }
+  },
+  "closedDuringOperation": {
+    "message": "操作期间关闭的标签页：$COUNT$。",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "errorWindow": { "message": "当前窗口不可用。" },
+  "errorWindowType": { "message": "请在普通浏览器窗口中使用此操作。" },
+  "errorOrder": { "message": "窗口顺序与预期不符；未再更改其他标签页。" },
+  "errorUnsupported": { "message": "此浏览器不支持移动标签页，无法合并或排序。" },
+  "errorAction": { "message": "未知操作。" },
+  "errorRuntime": { "message": "扩展程序后台未响应。" },
+  "sortReadFailed": { "message": "无法读取已保存的排序方式；当前选择网址。" },
+  "savingSort": { "message": "正在保存排序方式…" },
+  "sortSaved": { "message": "排序方式已保存。" },
+  "sortSaveFailed": { "message": "无法保存排序方式。" }
+}

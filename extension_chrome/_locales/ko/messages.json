@@ -1,0 +1,64 @@
+{
+  "extName": { "message": "Tab Merge N Sort" },
+  "extDescription": {
+    "message": "탭을 모으거나 현재 창 또는 모든 창을 URL 또는 제목순으로 정렬합니다."
+  },
+  "sortBy": { "message": "정렬 기준" },
+  "url": { "message": "URL" },
+  "title": { "message": "제목" },
+  "merge": { "message": "모으기" },
+  "sort": { "message": "정렬" },
+  "sortAll": { "message": "모두 정렬" },
+  "both": { "message": "모으고 정렬" },
+  "working": { "message": "처리 중…" },
+  "mergeNothing": { "message": "모을 탭이 없습니다." },
+  "mergeDone": {
+    "message": "모은 탭: $COUNT$개.",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "sortDone": {
+    "message": "$SORT$순으로 정렬한 탭: $COUNT$개.",
+    "placeholders": {
+      "sort": { "content": "$2" },
+      "count": { "content": "$1" }
+    }
+  },
+  "sortAllDone": {
+    "message": "$WINDOWS$개 창의 탭 $COUNT$개를 $SORT$ 기준으로 정렬했습니다.",
+    "placeholders": {
+      "count": { "content": "$1" },
+      "windows": { "content": "$2" },
+      "sort": { "content": "$3" }
+    }
+  },
+  "bothDone": {
+    "message": "모은 탭: $MERGED$개, $SORT$순으로 정렬한 탭: $SORTED$개.",
+    "placeholders": {
+      "merged": { "content": "$1" },
+      "sorted": { "content": "$2" },
+      "sort": { "content": "$3" }
+    }
+  },
+  "closedDuringOperation": {
+    "message": "작업 중 닫힌 탭: $COUNT$개.",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "errorWindow": { "message": "현재 창을 사용할 수 없습니다." },
+  "errorWindowType": {
+    "message": "일반 브라우저 창에서 이 작업을 실행하세요."
+  },
+  "errorOrder": {
+    "message": "창의 순서가 계획과 다릅니다. 다른 탭은 변경하지 않았습니다."
+  },
+  "errorUnsupported": { "message": "이 브라우저는 탭 이동을 지원하지 않습니다. 탭 병합과 정렬을 사용할 수 없습니다." },
+  "errorAction": { "message": "알 수 없는 작업입니다." },
+  "errorRuntime": {
+    "message": "확장 프로그램 백그라운드가 응답하지 않습니다."
+  },
+  "sortReadFailed": {
+    "message": "저장한 정렬 기준을 읽지 못했습니다. URL을 선택했습니다."
+  },
+  "savingSort": { "message": "정렬 기준 저장 중…" },
+  "sortSaved": { "message": "정렬 기준을 저장했습니다." },
+  "sortSaveFailed": { "message": "정렬 기준을 저장하지 못했습니다." }
+}

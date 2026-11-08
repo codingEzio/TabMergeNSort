@@ -1,0 +1,64 @@
+{
+  "extName": { "message": "Tab Merge N Sort" },
+  "extDescription": {
+    "message": "Merge tabs or sort the current window or every window by URL or title."
+  },
+  "sortBy": { "message": "Sort by" },
+  "url": { "message": "URL" },
+  "title": { "message": "Title" },
+  "merge": { "message": "Merge" },
+  "sort": { "message": "Sort" },
+  "sortAll": { "message": "Sort All" },
+  "both": { "message": "Merge + Sort" },
+  "working": { "message": "Working…" },
+  "mergeNothing": { "message": "Nothing to merge." },
+  "mergeDone": {
+    "message": "Merged tabs: $COUNT$.",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "sortDone": {
+    "message": "Sorted by $SORT$: $COUNT$.",
+    "placeholders": {
+      "sort": { "content": "$2" },
+      "count": { "content": "$1" }
+    }
+  },
+  "sortAllDone": {
+    "message": "Sorted $COUNT$ tabs across $WINDOWS$ windows by $SORT$.",
+    "placeholders": {
+      "count": { "content": "$1" },
+      "windows": { "content": "$2" },
+      "sort": { "content": "$3" }
+    }
+  },
+  "bothDone": {
+    "message": "Merged: $MERGED$; sorted by $SORT$: $SORTED$.",
+    "placeholders": {
+      "merged": { "content": "$1" },
+      "sorted": { "content": "$2" },
+      "sort": { "content": "$3" }
+    }
+  },
+  "closedDuringOperation": {
+    "message": "Tabs closed during the operation: $COUNT$.",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "errorWindow": { "message": "The current window is unavailable." },
+  "errorWindowType": {
+    "message": "Open this action from a normal browser window."
+  },
+  "errorOrder": {
+    "message": "The window order did not match the plan. Nothing else was changed."
+  },
+  "errorUnsupported": { "message": "This browser cannot move tabs. Merge and sort are unavailable." },
+  "errorAction": { "message": "Unknown action." },
+  "errorRuntime": {
+    "message": "The extension background worker did not answer."
+  },
+  "sortReadFailed": {
+    "message": "Saved sort choice could not be read. URL is selected."
+  },
+  "savingSort": { "message": "Saving sort choice…" },
+  "sortSaved": { "message": "Sort choice saved." },
+  "sortSaveFailed": { "message": "Sort choice could not be saved." }
+}

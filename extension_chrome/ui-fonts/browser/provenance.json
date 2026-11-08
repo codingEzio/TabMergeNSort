@@ -1,0 +1,189 @@
+{
+  "schemaVersion": 1,
+  "recipe": {
+    "schemaVersion": 1,
+    "version": "1.1.0",
+    "fonts": [
+      {
+        "family": "GeistMixUI_NerdAndZhAndEmoji3D",
+        "source": "pixel",
+        "axes": {
+          "ELSH": 0
+        }
+      },
+      {
+        "family": "GeistMixCode_NerdAndZhAndEmoji3D",
+        "source": "mono",
+        "variableWeight": [
+          100,
+          400,
+          900
+        ]
+      },
+      {
+        "family": "Doto500MixUI_NerdAndZhAndEmoji3D",
+        "source": "doto",
+        "axes": {
+          "wght": 500,
+          "ROND": 0
+        },
+        "height": 1.1,
+        "heightAxis": {
+          "tag": "HGHT",
+          "values": [
+            105,
+            110,
+            115,
+            120
+          ],
+          "default": 110
+        }
+      },
+      {
+        "family": "Doto700MixUI_NerdAndZhAndEmoji3D",
+        "source": "doto",
+        "axes": {
+          "wght": 700,
+          "ROND": 0
+        },
+        "height": 1.1,
+        "heightAxis": {
+          "tag": "HGHT",
+          "values": [
+            105,
+            110,
+            115,
+            120
+          ],
+          "default": 110
+        }
+      },
+      {
+        "family": "Doto900MixUI_NerdAndZhAndEmoji3D",
+        "source": "doto",
+        "axes": {
+          "wght": 900,
+          "ROND": 0
+        },
+        "height": 1.1,
+        "heightAxis": {
+          "tag": "HGHT",
+          "values": [
+            105,
+            110,
+            115,
+            120
+          ],
+          "default": 110
+        }
+      }
+    ],
+    "emoji": {
+      "sourcePpem": 55,
+      "targetPpem": 28,
+      "coverage": "all source cmap and GSUB; no repertoire subsetting",
+      "maxFontBytes": 16000000,
+      "pngPolicy": "Lanczos RGBA at28PPEM, per-image256-color alpha palette; all source glyphs retained"
+    },
+    "pixelSourceSha256": "dcde0e2ae59aad779e71ee3fa45ade3a7146c2498024fdbb79c8cb619e60a238",
+    "chinese": "original Cubic 11 geometry at normalized UPEM; no synthetic weight",
+    "doto": "original horizontal metrics; y scale only, baseline unchanged",
+    "layoutPolicy": "Full emoji ccmp lookups apply to every script/language ccmp record for Core Text and HarfBuzz",
+    "symbolAliases": {
+      "EA00": "F099"
+    }
+  },
+  "policy": "outline text plus full shared sbix / Android CBDT Emoji3D fallback",
+  "assets": [
+    {
+      "family": "GeistMixUI_NerdAndZhAndEmoji3D",
+      "ttf": "GeistMixUI_NerdAndZhAndEmoji3D.ttf",
+      "woff2": "GeistMixUI_NerdAndZhAndEmoji3D.woff2",
+      "sourceSha256": "42ae04881ebd58790fb69112b504ab5acf7571a17f2caa7578e121a166732ac1",
+      "ttfSha256": "8a5ec9da5e6eaf9d79d5c033f97979a7544ff7f6e8f706cb2acaa291b9ccd489",
+      "woff2Sha256": "f47293da8758f8cb39402da67b00208a012b8287367b73063ec2f0db15a3408c",
+      "ttfBytes": 5995488,
+      "woff2Bytes": 1552196
+    },
+    {
+      "family": "GeistMixCode_NerdAndZhAndEmoji3D",
+      "ttf": "GeistMixCode_NerdAndZhAndEmoji3D.ttf",
+      "woff2": "GeistMixCode_NerdAndZhAndEmoji3D.woff2",
+      "sourceSha256": "85e36e8ce642206bbbc87fe98eef6322246b39b5e70aa5ff7f008579bb7ca853",
+      "ttfSha256": "e37de41fd66d3896e7b903aec7c70c3b725fda4707f00ce19ff926724ff5fb53",
+      "woff2Sha256": "906a78e49394149a9b85c71e3b6af19a50ef0ab1bc9d8da86006f77f15af0a0e",
+      "ttfBytes": 5354796,
+      "woff2Bytes": 1592320
+    },
+    {
+      "family": "Doto500MixUI_NerdAndZhAndEmoji3D",
+      "ttf": "Doto500MixUI_NerdAndZhAndEmoji3D.ttf",
+      "woff2": "Doto500MixUI_NerdAndZhAndEmoji3D.woff2",
+      "sourceSha256": "d557a016f10edaba2c435883b85ccc7c48561a6102f61da8c29d6b99c9c2a047",
+      "ttfSha256": "c53385b61def6d5633a917d4617e59c523fc1a0b06f1817da7da2064cf51f299",
+      "woff2Sha256": "b01a09cf6cf04bdea83eaaec005ae0ca4b02b9a1b433f7619698268be312c9f3",
+      "ttfBytes": 5549900,
+      "woff2Bytes": 1536968
+    },
+    {
+      "family": "Doto700MixUI_NerdAndZhAndEmoji3D",
+      "ttf": "Doto700MixUI_NerdAndZhAndEmoji3D.ttf",
+      "woff2": "Doto700MixUI_NerdAndZhAndEmoji3D.woff2",
+      "sourceSha256": "8993be1e71930b5a1f02280e9194b08f8a88fe3901343ff886333b0e340f55ab",
+      "ttfSha256": "5ee0a24e7d7f7ef75576f9927dcf5a182924dd2836bdfa3b2b1a4cf04ee29042",
+      "woff2Sha256": "84cbd889d9e44a71db5ed1e1ce920a06ae87e8fa5557f735c1256a2cbb225c9c",
+      "ttfBytes": 5549892,
+      "woff2Bytes": 1537680
+    },
+    {
+      "family": "Doto900MixUI_NerdAndZhAndEmoji3D",
+      "ttf": "Doto900MixUI_NerdAndZhAndEmoji3D.ttf",
+      "woff2": "Doto900MixUI_NerdAndZhAndEmoji3D.woff2",
+      "sourceSha256": "cb9c3ba884b1e44010e466f8785d62bb45dd68dfd27cf62b1d3df8ee44633124",
+      "ttfSha256": "d41db0596c2db1145702005375e0bfa2208420c7f0216d7bb048b6f0bb3996aa",
+      "woff2Sha256": "7c06e9fe4f51cc0fee771554a5f55d2ebfae4f85522c57a9b09123a1f6785faf",
+      "ttfBytes": 5544444,
+      "woff2Bytes": 1537596
+    },
+    {
+      "family": "DeparturePixelZh",
+      "ttf": "DeparturePixelZh-Regular.ttf",
+      "woff2": "DeparturePixelZh-Regular.woff2",
+      "sourceSha256": "85875131c24df8394162f2551b8d01f13a45ad118bea998ad321413bc7722c98",
+      "ttfSha256": "f452132b9c237bf86d87b78c28e95344570d0b660106d360f68effce2c9f5d51",
+      "woff2Sha256": "43b3d4dd811b376e360ce28275ab3e41d68b7e4f61dab60e44933608da62fe23",
+      "ttfBytes": 4975796,
+      "woff2Bytes": 1390160
+    },
+    {
+      "family": "DeparturePixelZh Compact",
+      "ttf": "DeparturePixelZhCompact-Regular.ttf",
+      "woff2": "DeparturePixelZhCompact-Regular.woff2",
+      "sourceSha256": "3e75e623b1ba2c8d7eb52f2ac3ee71c3fbb5c4e0f1426bd34b3c1e071738288b",
+      "ttfSha256": "239e8a74e1c14530b8f91b734ccecb0c2bfb3d30476f64eeb8ef5d9d84753408",
+      "woff2Sha256": "2b46974c046bc8d9b1f4f195d5fe848ae17ebb41ed2a99f3784cb60ad65c13eb",
+      "ttfBytes": 4975108,
+      "woff2Bytes": 1389344
+    },
+    {
+      "family": "Emoji3D",
+      "ttf": "Emoji3D.ttf",
+      "woff2": "Emoji3D.woff2",
+      "ttfSha256": "e1173c61124f3579cc4f6c4f96354a2c053462e014217736fc840dd4f3c08554",
+      "woff2Sha256": "574d0763c549c1d0c281f692f64a11d56ee8cfb054c9f64f5872b76380f396c7",
+      "ttfBytes": 7025596,
+      "woff2Bytes": 4540092,
+      "fullEmojiRepertoire": true
+    },
+    {
+      "family": "Emoji3D-Android",
+      "ttf": "Emoji3D-Android.ttf",
+      "woff2": "Emoji3D-Android.woff2",
+      "ttfSha256": "e806211489df0b522a195f018139cea70e6add8c80f15f895a24fc9a0261338d",
+      "woff2Sha256": "9d339473c30e0b8919c38b7c45d6c95d97ee4ad220253a3b8e201cbae0c889d8",
+      "ttfBytes": 7029652,
+      "woff2Bytes": 4551184,
+      "fullEmojiRepertoire": true
+    }
+  ]
+}

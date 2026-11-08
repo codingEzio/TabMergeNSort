@@ -1,0 +1,64 @@
+{
+  "extName": { "message": "Tab Merge N Sort" },
+  "extDescription": {
+    "message": "Combina pestañas u ordena la ventana actual o todas las ventanas por URL o título."
+  },
+  "sortBy": { "message": "Ordenar por" },
+  "url": { "message": "URL" },
+  "title": { "message": "Título" },
+  "merge": { "message": "Combinar" },
+  "sort": { "message": "Ordenar" },
+  "sortAll": { "message": "Ordenar todo" },
+  "both": { "message": "Combinar y ordenar" },
+  "working": { "message": "Procesando…" },
+  "mergeNothing": { "message": "No hay pestañas para combinar." },
+  "mergeDone": {
+    "message": "Pestañas combinadas: $COUNT$.",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "sortDone": {
+    "message": "Ordenadas por $SORT$: $COUNT$.",
+    "placeholders": {
+      "sort": { "content": "$2" },
+      "count": { "content": "$1" }
+    }
+  },
+  "sortAllDone": {
+    "message": "Se ordenaron $COUNT$ pestañas en $WINDOWS$ ventanas por $SORT$.",
+    "placeholders": {
+      "count": { "content": "$1" },
+      "windows": { "content": "$2" },
+      "sort": { "content": "$3" }
+    }
+  },
+  "bothDone": {
+    "message": "Combinadas: $MERGED$; ordenadas por $SORT$: $SORTED$.",
+    "placeholders": {
+      "merged": { "content": "$1" },
+      "sorted": { "content": "$2" },
+      "sort": { "content": "$3" }
+    }
+  },
+  "closedDuringOperation": {
+    "message": "Pestañas cerradas durante la operación: $COUNT$.",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "errorWindow": { "message": "La ventana actual no está disponible." },
+  "errorWindowType": {
+    "message": "Abre esta acción en una ventana normal del navegador."
+  },
+  "errorOrder": {
+    "message": "El orden de la ventana no coincide con el previsto. No se cambiaron más pestañas."
+  },
+  "errorUnsupported": { "message": "Este navegador no permite mover pestañas. No se pueden combinar ni ordenar." },
+  "errorAction": { "message": "Acción desconocida." },
+  "errorRuntime": {
+    "message": "El servicio de fondo de la extensión no respondió."
+  },
+  "sortReadFailed": {
+    "message": "No se pudo leer el orden guardado. Se seleccionó URL."
+  },
+  "savingSort": { "message": "Guardando el orden…" },
+  "sortSaved": { "message": "Orden guardado." },
+  "sortSaveFailed": { "message": "No se pudo guardar el orden." }
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "name": "X-ExtTabMergeNSort",
+  "title": "TabMergeNSort",
+  "product": "tab_merge_n_sort",
+  "variant": null,
+  "safariId": "tab-merge-n-sort",
+  "firefox": null,
+  "chromeRoot": "extension_chrome",
+  "safariRoot": "extension_safari",
+  "viaRoot": null,
+  "sourceRepository": "A-Prometheus",
+  "sourceRevision": "614b19a073ac92500dc31341b95915504c7e1485",
+  "sourceRoot": "module_extensions/tab_merge_n_sort",
+  "focus": [
+    "chrome"
+  ],
+  "pausedTargets": [
+    "safari"
+  ],
+  "displayName": "Tab Merge N Sort",
+  "version": "0.99.0",
+  "candidateRepository": "Z-TabMergeNSort",
+  "chromeId": "ghblmligghdjladgiknambpkkmpdobml",
+  "chromeKeySource": "new-for-owner-approved-fresh-install",
+  "tests": [
+    "tab_merge_n_sort_test.ts"
+  ]
+}

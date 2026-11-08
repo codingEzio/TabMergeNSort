@@ -1,0 +1,230 @@
+{
+  "scope": "Selected source font-name variant; not installation or public release",
+  "originalSourceSeal": "aca7415a61213b90170767cafa698bd41108ffc17d09b536fd2ba4965f4e2178",
+  "producer": "FontMod1.1.0 reviewed public platform",
+  "producerNamingReceiptSha256": "b14b8a538d49e4cc04e2fe705f1375d0ad1eddbeb8104f46a84e79bff105e722",
+  "nameMap": {
+    "GeistMixUI_NerdAndZhCubic11AndEmoji3D": "GeistMixUI_NerdAndZhAndEmoji3D",
+    "GeistMixCode_NerdAndZhCubic11AndEmoji3D": "GeistMixCode_NerdAndZhAndEmoji3D",
+    "Doto500MixUI_NerdAndZhCubic11AndEmoji3D": "Doto500MixUI_NerdAndZhAndEmoji3D",
+    "Doto700MixUI_NerdAndZhCubic11AndEmoji3D": "Doto700MixUI_NerdAndZhAndEmoji3D",
+    "Doto900MixUI_NerdAndZhCubic11AndEmoji3D": "Doto900MixUI_NerdAndZhAndEmoji3D"
+  },
+  "stableChoiceIdsDefaultsExact": true,
+  "sourceFilesChangedBeforeManifestRegeneration": [
+    {
+      "before": "dependencies.lock.json",
+      "after": "dependencies.lock.json",
+      "beforeSha256": "e1371434970cc0336db4e662271669a9bceeec1fc4690740a9c957c52d91c48d",
+      "afterSha256": "2efa6cf60f8c7035ad00120d38470cc9e0f615f643199e293b477ba272356e4f"
+    },
+    {
+      "before": "extension_chrome/popup.css",
+      "after": "extension_chrome/popup.css",
+      "beforeSha256": "418bb824e0b6e40f33953c7e2e305ccd1826faef0424e76a85c03d47b78e770a",
+      "afterSha256": "d938b814ed2718377f81918afdcc157356a09f619d1d7dbba73be0c01c55aaa6"
+    },
+    {
+      "before": "extension_chrome/ui-fonts/browser-font-manifest.json",
+      "after": "extension_chrome/ui-fonts/browser-font-manifest.json",
+      "beforeSha256": "7efa193b0d5125392619ce9b1647ffce3ed1b19aad5d84f972a25edbee34b9b8",
+      "afterSha256": "70e2dea095faad5b3f523491494b264f033a0519eaa6df7624522d81c4646919"
+    },
+    {
+      "before": "extension_chrome/ui-fonts/browser/Doto500MixUI_NerdAndZhCubic11AndEmoji3D.woff2",
+      "after": "extension_chrome/ui-fonts/browser/Doto500MixUI_NerdAndZhAndEmoji3D.woff2",
+      "beforeSha256": "864d48d401308ad4fb2bc19846682363417707fa1cd76e229d6b50002f518135",
+      "afterSha256": "b01a09cf6cf04bdea83eaaec005ae0ca4b02b9a1b433f7619698268be312c9f3"
+    },
+    {
+      "before": "extension_chrome/ui-fonts/browser/Doto700MixUI_NerdAndZhCubic11AndEmoji3D.woff2",
+      "after": "extension_chrome/ui-fonts/browser/Doto700MixUI_NerdAndZhAndEmoji3D.woff2",
+      "beforeSha256": "c7f525d9ec1a08b2733ba03c31a5b29af628cf5523012f525dde299795c1116e",
+      "afterSha256": "84cbd889d9e44a71db5ed1e1ce920a06ae87e8fa5557f735c1256a2cbb225c9c"
+    },
+    {
+      "before": "extension_chrome/ui-fonts/browser/Doto900MixUI_NerdAndZhCubic11AndEmoji3D.woff2",
+      "after": "extension_chrome/ui-fonts/browser/Doto900MixUI_NerdAndZhAndEmoji3D.woff2",
+      "beforeSha256": "e13608d490235eb42f5d728dc463750e2dbe1819fcb1838e2b4025a8312c8f41",
+      "afterSha256": "7c06e9fe4f51cc0fee771554a5f55d2ebfae4f85522c57a9b09123a1f6785faf"
+    },
+    {
+      "before": "extension_chrome/ui-fonts/browser/GeistMixCode_NerdAndZhCubic11AndEmoji3D.woff2",
+      "after": "extension_chrome/ui-fonts/browser/GeistMixCode_NerdAndZhAndEmoji3D.woff2",
+      "beforeSha256": "79e5385ae08b99202379e58a425c638ccf73b3d9d0f87d4d251e02c4e31cbfe2",
+      "afterSha256": "906a78e49394149a9b85c71e3b6af19a50ef0ab1bc9d8da86006f77f15af0a0e"
+    },
+    {
+      "before": "extension_chrome/ui-fonts/browser/GeistMixUI_NerdAndZhCubic11AndEmoji3D.woff2",
+      "after": "extension_chrome/ui-fonts/browser/GeistMixUI_NerdAndZhAndEmoji3D.woff2",
+      "beforeSha256": "a048fddb82938aacc6ff6f0203364f451d31a08dfec47b2e843a5db1ac245b94",
+      "afterSha256": "f47293da8758f8cb39402da67b00208a012b8287367b73063ec2f0db15a3408c"
+    },
+    {
+      "before": "extension_chrome/ui-fonts/browser/mixed-source-provenance.json",
+      "after": "extension_chrome/ui-fonts/browser/mixed-source-provenance.json",
+      "beforeSha256": "ca0785a595a73fbe16f4402d582abcdc5b219c1389c12ecc1258179e88e1b845",
+      "afterSha256": "a06c7f44899c040513feca2ebeb9d558adf4c59d2c191cb23c8aa07ffd51455c"
+    },
+    {
+      "before": "extension_chrome/ui-fonts/browser/provenance.json",
+      "after": "extension_chrome/ui-fonts/browser/provenance.json",
+      "beforeSha256": "1c85a8425684b07ed3061a19425a05b9e6857fabfefe134ef447c837366086ca",
+      "afterSha256": "52f6ea6ebca215d7f77c25e2e24fb7546196bb480083d51b98fd9aca6cc5f54f"
+    },
+    {
+      "before": "extension_chrome/ui-typography.js",
+      "after": "extension_chrome/ui-typography.js",
+      "beforeSha256": "ba44368fb7af90ed1e4191092f9f7abdd92c67c1e9b1141bcbf7a201f02034e4",
+      "afterSha256": "20b22c58c1b6e27188768af5bd00e3944ba1e41ee2d83c01b52ea86ff77831b4"
+    },
+    {
+      "before": "extension_safari/web-extension/popup.css",
+      "after": "extension_safari/web-extension/popup.css",
+      "beforeSha256": "1984b65e546e1ec9cdf0794c803d124c4fb5fadb2ed52c2464bb93e3783dc0e3",
+      "afterSha256": "ea5d2fdd255b865fc55ded8c6bb67f7b240a3a1dc9f736f8a482f93b14da33af"
+    },
+    {
+      "before": "extension_safari/web-extension/ui-fonts/browser-font-manifest.json",
+      "after": "extension_safari/web-extension/ui-fonts/browser-font-manifest.json",
+      "beforeSha256": "ab52c258988352a3601720126db824bb1c4a68f33a4b8d3e78c70c155491db3c",
+      "afterSha256": "508b434134e4b3f550432202f2afc59abebee91c67153f37e83df57a52869a2d"
+    },
+    {
+      "before": "extension_safari/web-extension/ui-fonts/browser/Doto500MixUI_NerdAndZhCubic11AndEmoji3D.woff2",
+      "after": "extension_safari/web-extension/ui-fonts/browser/Doto500MixUI_NerdAndZhAndEmoji3D.woff2",
+      "beforeSha256": "864d48d401308ad4fb2bc19846682363417707fa1cd76e229d6b50002f518135",
+      "afterSha256": "b01a09cf6cf04bdea83eaaec005ae0ca4b02b9a1b433f7619698268be312c9f3"
+    },
+    {
+      "before": "extension_safari/web-extension/ui-fonts/browser/Doto700MixUI_NerdAndZhCubic11AndEmoji3D.woff2",
+      "after": "extension_safari/web-extension/ui-fonts/browser/Doto700MixUI_NerdAndZhAndEmoji3D.woff2",
+      "beforeSha256": "c7f525d9ec1a08b2733ba03c31a5b29af628cf5523012f525dde299795c1116e",
+      "afterSha256": "84cbd889d9e44a71db5ed1e1ce920a06ae87e8fa5557f735c1256a2cbb225c9c"
+    },
+    {
+      "before": "extension_safari/web-extension/ui-fonts/browser/Doto900MixUI_NerdAndZhCubic11AndEmoji3D.woff2",
+      "after": "extension_safari/web-extension/ui-fonts/browser/Doto900MixUI_NerdAndZhAndEmoji3D.woff2",
+      "beforeSha256": "e13608d490235eb42f5d728dc463750e2dbe1819fcb1838e2b4025a8312c8f41",
+      "afterSha256": "7c06e9fe4f51cc0fee771554a5f55d2ebfae4f85522c57a9b09123a1f6785faf"
+    },
+    {
+      "before": "extension_safari/web-extension/ui-fonts/browser/GeistMixCode_NerdAndZhCubic11AndEmoji3D.woff2",
+      "after": "extension_safari/web-extension/ui-fonts/browser/GeistMixCode_NerdAndZhAndEmoji3D.woff2",
+      "beforeSha256": "79e5385ae08b99202379e58a425c638ccf73b3d9d0f87d4d251e02c4e31cbfe2",
+      "afterSha256": "906a78e49394149a9b85c71e3b6af19a50ef0ab1bc9d8da86006f77f15af0a0e"
+    },
+    {
+      "before": "extension_safari/web-extension/ui-fonts/browser/GeistMixUI_NerdAndZhCubic11AndEmoji3D.woff2",
+      "after": "extension_safari/web-extension/ui-fonts/browser/GeistMixUI_NerdAndZhAndEmoji3D.woff2",
+      "beforeSha256": "a048fddb82938aacc6ff6f0203364f451d31a08dfec47b2e843a5db1ac245b94",
+      "afterSha256": "f47293da8758f8cb39402da67b00208a012b8287367b73063ec2f0db15a3408c"
+    },
+    {
+      "before": "extension_safari/web-extension/ui-fonts/browser/mixed-source-provenance.json",
+      "after": "extension_safari/web-extension/ui-fonts/browser/mixed-source-provenance.json",
+      "beforeSha256": "ca0785a595a73fbe16f4402d582abcdc5b219c1389c12ecc1258179e88e1b845",
+      "afterSha256": "a06c7f44899c040513feca2ebeb9d558adf4c59d2c191cb23c8aa07ffd51455c"
+    },
+    {
+      "before": "extension_safari/web-extension/ui-fonts/browser/provenance.json",
+      "after": "extension_safari/web-extension/ui-fonts/browser/provenance.json",
+      "beforeSha256": "1c85a8425684b07ed3061a19425a05b9e6857fabfefe134ef447c837366086ca",
+      "afterSha256": "52f6ea6ebca215d7f77c25e2e24fb7546196bb480083d51b98fd9aca6cc5f54f"
+    },
+    {
+      "before": "extension_safari/web-extension/ui-typography.js",
+      "after": "extension_safari/web-extension/ui-typography.js",
+      "beforeSha256": "15089c2f98f322d22988a4c6ac7635a58cb4561e9a5d3578e8705bc24b23acd4",
+      "afterSha256": "99059a8cc01e4e8b47984497d72d4bac7134406b564d3c924c9c7e769fe1ac8f"
+    },
+    {
+      "before": "public-source.json",
+      "after": "public-source.json",
+      "beforeSha256": "352ded52d01af0629262dbded1fcd6b696f4bf1005c99018739d4d40cb17e9e1",
+      "afterSha256": "071bdccbf5da76984059554247c74075c1eb720ebf190066a6a4e601407bee01"
+    },
+    {
+      "before": "scripts/sync_safari.ts",
+      "after": "scripts/sync_safari.ts",
+      "beforeSha256": "7c4131b75bf86e914cf2703e5c4a322750c59476e22767b925c424a07bc7983c",
+      "afterSha256": "b897456d15bdf846c0747af7e88ad07bf8d60f2f3b55fbe1bb89aea0233d7ac7"
+    },
+    {
+      "before": "shared/design/browser-font-manifest.json",
+      "after": "shared/design/browser-font-manifest.json",
+      "beforeSha256": "7efa193b0d5125392619ce9b1647ffce3ed1b19aad5d84f972a25edbee34b9b8",
+      "afterSha256": "70e2dea095faad5b3f523491494b264f033a0519eaa6df7624522d81c4646919"
+    },
+    {
+      "before": "shared/design/collection.css",
+      "after": "shared/design/collection.css",
+      "beforeSha256": "b509e95d21adbffc76bd978dbddcd1f483d6edf6a6b15535a04a82652836cd08",
+      "afterSha256": "c789fc0b9c97a7856f17359d5c131973cef02d03dbed1e58f736cc3b09beb5e7"
+    },
+    {
+      "before": "shared/design/final-font-catalog.json",
+      "after": "shared/design/final-font-catalog.json",
+      "beforeSha256": "2b862ce206879ece7186618b62fe14e4fe410637675d55db38b648754b0619cf",
+      "afterSha256": "c62395082860158ca8f54b47010214d6adddf18ea0086b365afa4ea8bd39f334"
+    },
+    {
+      "before": "shared/design/fonts/browser/Doto500MixUI_NerdAndZhCubic11AndEmoji3D.woff2",
+      "after": "shared/design/fonts/browser/Doto500MixUI_NerdAndZhAndEmoji3D.woff2",
+      "beforeSha256": "864d48d401308ad4fb2bc19846682363417707fa1cd76e229d6b50002f518135",
+      "afterSha256": "b01a09cf6cf04bdea83eaaec005ae0ca4b02b9a1b433f7619698268be312c9f3"
+    },
+    {
+      "before": "shared/design/fonts/browser/Doto700MixUI_NerdAndZhCubic11AndEmoji3D.woff2",
+      "after": "shared/design/fonts/browser/Doto700MixUI_NerdAndZhAndEmoji3D.woff2",
+      "beforeSha256": "c7f525d9ec1a08b2733ba03c31a5b29af628cf5523012f525dde299795c1116e",
+      "afterSha256": "84cbd889d9e44a71db5ed1e1ce920a06ae87e8fa5557f735c1256a2cbb225c9c"
+    },
+    {
+      "before": "shared/design/fonts/browser/Doto900MixUI_NerdAndZhCubic11AndEmoji3D.woff2",
+      "after": "shared/design/fonts/browser/Doto900MixUI_NerdAndZhAndEmoji3D.woff2",
+      "beforeSha256": "e13608d490235eb42f5d728dc463750e2dbe1819fcb1838e2b4025a8312c8f41",
+      "afterSha256": "7c06e9fe4f51cc0fee771554a5f55d2ebfae4f85522c57a9b09123a1f6785faf"
+    },
+    {
+      "before": "shared/design/fonts/browser/GeistMixCode_NerdAndZhCubic11AndEmoji3D.woff2",
+      "after": "shared/design/fonts/browser/GeistMixCode_NerdAndZhAndEmoji3D.woff2",
+      "beforeSha256": "79e5385ae08b99202379e58a425c638ccf73b3d9d0f87d4d251e02c4e31cbfe2",
+      "afterSha256": "906a78e49394149a9b85c71e3b6af19a50ef0ab1bc9d8da86006f77f15af0a0e"
+    },
+    {
+      "before": "shared/design/fonts/browser/GeistMixUI_NerdAndZhCubic11AndEmoji3D.woff2",
+      "after": "shared/design/fonts/browser/GeistMixUI_NerdAndZhAndEmoji3D.woff2",
+      "beforeSha256": "a048fddb82938aacc6ff6f0203364f451d31a08dfec47b2e843a5db1ac245b94",
+      "afterSha256": "f47293da8758f8cb39402da67b00208a012b8287367b73063ec2f0db15a3408c"
+    },
+    {
+      "before": "shared/design/fonts/browser/mixed-source-provenance.json",
+      "after": "shared/design/fonts/browser/mixed-source-provenance.json",
+      "beforeSha256": "ca0785a595a73fbe16f4402d582abcdc5b219c1389c12ecc1258179e88e1b845",
+      "afterSha256": "a06c7f44899c040513feca2ebeb9d558adf4c59d2c191cb23c8aa07ffd51455c"
+    },
+    {
+      "before": "shared/design/fonts/browser/provenance.json",
+      "after": "shared/design/fonts/browser/provenance.json",
+      "beforeSha256": "1c85a8425684b07ed3061a19425a05b9e6857fabfefe134ef447c837366086ca",
+      "afterSha256": "52f6ea6ebca215d7f77c25e2e24fb7546196bb480083d51b98fd9aca6cc5f54f"
+    },
+    {
+      "before": "shared/design/popup.css",
+      "after": "shared/design/popup.css",
+      "beforeSha256": "3d2aa6bf184a615c40ef2aaacfff34cd2d72f18714c20d6b50249050708ca5ca",
+      "afterSha256": "425b1debb47e96c107aa2454a0b3a28d78c86d81d04c087ed5b71c92473008ad"
+    },
+    {
+      "before": "shared/design/ui-typography.js",
+      "after": "shared/design/ui-typography.js",
+      "beforeSha256": "d49fe2e1b57ba2a0626daba1c205fa1626a92b5f18883ce477efe98ac75bf7fc",
+      "afterSha256": "2ccbc48cc5d068459d9bfc8bc07c5f5ba6adef144d4fd86c4fe5fc3c2f5e1d40"
+    }
+  ],
+  "limits": [
+    "Original source and all non-font snapshots are preserved; full owner sync was not performed.",
+    "Original font/component licenses retained. This transformation does not clear all artwork, history or release rights."
+  ]
+}
