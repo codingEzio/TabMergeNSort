@@ -14,6 +14,7 @@ Safari 功能限制：Apple 的
 
 安装 Deno 2.x 与 Git，执行 `deno task check`、`deno task build`。检查使用合成
 本地数据；构建只生成 `Local/candidates/` 候选包，不安装扩展或打开浏览器。
+Chrome 构建仅在完整读回一致时复用既有候选；冲突或中断的候选会保留并报错。
 共享依赖由 `dependencies.lock.json` 固定，日常构建不读取相邻项目。
 
 更新依赖时先修改其源项目，再显式执行
