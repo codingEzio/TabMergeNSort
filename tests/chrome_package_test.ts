@@ -46,6 +46,52 @@ Deno.test("Chrome package retains its reachable resources without unused font in
         stdout: "piped",
         stderr: "piped",
       }).output();
+    const outside = join(fixture, "outside");
+    await Deno.mkdir(outside);
+    await Deno.writeTextFile(join(outside, "sentinel"), "unchanged");
+    const syntheticLink = async (path: string) => {
+      const command = await new Deno.Command("ln", {
+        args: ["-s", await Deno.realPath(outside), path],
+      }).output();
+      if (!command.success) {
+        throw Error("Could not create synthetic parent symlink");
+      }
+    };
+    const local = join(fixture, "Local");
+    await syntheticLink(local);
+    let blocked = await runPackage();
+    assertEquals(blocked.success, false);
+    assertEquals(
+      new TextDecoder().decode(blocked.stderr).includes(
+        "Candidate parent must be a real directory",
+      ),
+      true,
+    );
+    assertEquals([...Deno.readDirSync(outside)].map((entry) => entry.name), [
+      "sentinel",
+    ]);
+    await Deno.rename(local, join(fixture, "retained-local-link"));
+    await Deno.mkdir(local);
+    await syntheticLink(join(local, "candidates"));
+    blocked = await runPackage();
+    assertEquals(blocked.success, false);
+    assertEquals(
+      new TextDecoder().decode(blocked.stderr).includes(
+        "Candidate parent must be a real directory",
+      ),
+      true,
+    );
+    assertEquals([...Deno.readDirSync(outside)].map((entry) => entry.name), [
+      "sentinel",
+    ]);
+    assertEquals(
+      await Deno.readTextFile(join(outside, "sentinel")),
+      "unchanged",
+    );
+    await Deno.rename(
+      join(local, "candidates"),
+      join(fixture, "retained-candidates-link"),
+    );
     const command = await runPackage();
     if (!command.success) throw Error(new TextDecoder().decode(command.stderr));
     const result = JSON.parse(new TextDecoder().decode(command.stdout).trim());

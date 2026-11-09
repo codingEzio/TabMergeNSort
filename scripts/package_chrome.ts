@@ -83,7 +83,28 @@ async function matches(
   }
 }
 
-await Deno.mkdir(parent, { recursive: true });
+async function ensureDirectory(path: string) {
+  try {
+    await Deno.mkdir(path);
+  } catch (error) {
+    if (!(error instanceof Deno.errors.AlreadyExists)) throw error;
+  }
+  const info = await Deno.lstat(path);
+  if (!info.isDirectory || info.isSymlink) {
+    throw Error(`Candidate parent must be a real directory: ${path}`);
+  }
+}
+const local = join(root, "Local");
+async function checkParents() {
+  for (const path of [local, parent]) {
+    const info = await Deno.lstat(path);
+    if (!info.isDirectory || info.isSymlink) {
+      throw Error(`Candidate parent must be a real directory: ${path}`);
+    }
+  }
+}
+await ensureDirectory(local);
+await ensureDirectory(parent);
 const maxCandidates = 32;
 let selected: { output: string; reused: boolean } | undefined;
 for (let index = 0; index < maxCandidates; index++) {
@@ -92,6 +113,7 @@ for (let index = 0; index < maxCandidates; index++) {
   const receiptBytes = new TextEncoder().encode(
     JSON.stringify({ ...receipt, seal, output }, null, 2) + "\n",
   );
+  await checkParents();
   let created = false;
   try {
     // Exclusive creation prevents concurrent writers from sharing a candidate.
@@ -115,10 +137,23 @@ for (let index = 0; index < maxCandidates; index++) {
       throw Error(`Source changed while packaging: ${file.path}`);
     }
     const to = join(output, "extension_chrome", file.path);
-    await Deno.mkdir(to.slice(0, to.lastIndexOf("/")), { recursive: true });
+    await checkParents();
+    await ensureDirectory(output);
+    const components = [
+      "extension_chrome",
+      ...file.path.split("/").slice(0, -1),
+    ];
+    let directory = output;
+    for (const component of components) {
+      directory = join(directory, component);
+      await ensureDirectory(directory);
+    }
+    await checkParents();
     await Deno.writeFile(to, bytes, { createNew: true });
   }
   // Write the receipt last. Interrupted candidates are preserved and skipped.
+  await checkParents();
+  await ensureDirectory(output);
   await Deno.writeFile(join(output, "receipt.json"), receiptBytes, {
     createNew: true,
   });
