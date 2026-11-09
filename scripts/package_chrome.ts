@@ -18,10 +18,6 @@ const seal = await sha256(
   new TextEncoder().encode(JSON.stringify(receipt.files)),
 );
 const parent = join(root, "Local/candidates");
-const output = join(parent, seal.slice(0, 16));
-const receiptBytes = new TextEncoder().encode(
-  JSON.stringify({ ...receipt, seal, output }, null, 2) + "\n",
-);
 const expectedFiles = new Set([
   "receipt.json",
   ...receipt.files.map((file) => `extension_chrome/${file.path}`),
@@ -36,54 +32,81 @@ for (const path of expectedFiles) {
   }
 }
 
-async function readback() {
+async function matches(
+  output: string,
+  receiptBytes: Uint8Array,
+): Promise<boolean> {
   const actualFiles = new Set<string>();
   const actualDirs = new Set<string>();
-  async function visit(dir: string, prefix = "") {
+  async function visit(dir: string, prefix = ""): Promise<boolean> {
     for await (const entry of Deno.readDir(dir)) {
       const path = prefix ? `${prefix}/${entry.name}` : entry.name;
-      if (entry.isSymlink) throw Error(`Candidate has symlink: ${path}`);
+      if (entry.isSymlink) return false;
       if (entry.isDirectory) {
         actualDirs.add(path);
-        await visit(join(dir, entry.name), path);
+        if (!await visit(join(dir, entry.name), path)) return false;
       } else if (entry.isFile) actualFiles.add(path);
-      else throw Error(`Candidate has unsupported entry: ${path}`);
+      else return false;
     }
+    return true;
   }
-  const info = await Deno.lstat(output);
-  if (!info.isDirectory || info.isSymlink) {
-    throw Error("Candidate is not a directory");
-  }
-  await visit(output);
-  const same = (a: Set<string>, b: Set<string>) =>
-    a.size === b.size && [...a].every((path) => b.has(path));
-  if (!same(actualFiles, expectedFiles) || !same(actualDirs, expectedDirs)) {
-    throw Error("Candidate is incomplete or contains unexpected entries");
-  }
-  const existingReceipt = await Deno.readFile(join(output, "receipt.json"));
-  if (await sha256(existingReceipt) !== await sha256(receiptBytes)) {
-    throw Error("Candidate receipt differs");
-  }
-  for (const file of receipt.files) {
-    const bytes = await Deno.readFile(
-      join(output, "extension_chrome", file.path),
-    );
-    if (bytes.length !== file.bytes || await sha256(bytes) !== file.sha256) {
-      throw Error(`Candidate file differs: ${file.path}`);
+  try {
+    const info = await Deno.lstat(output);
+    if (!info.isDirectory || info.isSymlink || !await visit(output)) {
+      return false;
     }
+    const same = (a: Set<string>, b: Set<string>) =>
+      a.size === b.size && [...a].every((path) => b.has(path));
+    if (!same(actualFiles, expectedFiles) || !same(actualDirs, expectedDirs)) {
+      return false;
+    }
+    const existingReceipt = await Deno.readFile(join(output, "receipt.json"));
+    if (await sha256(existingReceipt) !== await sha256(receiptBytes)) {
+      return false;
+    }
+    for (const file of receipt.files) {
+      const bytes = await Deno.readFile(
+        join(output, "extension_chrome", file.path),
+      );
+      if (bytes.length !== file.bytes || await sha256(bytes) !== file.sha256) {
+        return false;
+      }
+    }
+    return true;
+  } catch (error) {
+    // A concurrent creator may not have finished; never alter its directory.
+    if (
+      error instanceof Deno.errors.NotFound ||
+      error instanceof Deno.errors.NotADirectory
+    ) return false;
+    throw error;
   }
 }
 
 await Deno.mkdir(parent, { recursive: true });
-let created = false;
-try {
-  // Exclusive directory creation prevents concurrent writers from sharing a candidate.
-  await Deno.mkdir(output);
-  created = true;
-} catch (error) {
-  if (!(error instanceof Deno.errors.AlreadyExists)) throw error;
-}
-if (created) {
+const maxCandidates = 32;
+let selected: { output: string; reused: boolean } | undefined;
+for (let index = 0; index < maxCandidates; index++) {
+  const suffix = index === 0 ? "" : `-${String(index).padStart(2, "0")}`;
+  const output = join(parent, seal.slice(0, 16) + suffix);
+  const receiptBytes = new TextEncoder().encode(
+    JSON.stringify({ ...receipt, seal, output }, null, 2) + "\n",
+  );
+  let created = false;
+  try {
+    // Exclusive creation prevents concurrent writers from sharing a candidate.
+    await Deno.mkdir(output);
+    created = true;
+  } catch (error) {
+    if (!(error instanceof Deno.errors.AlreadyExists)) throw error;
+  }
+  if (!created) {
+    if (await matches(output, receiptBytes)) {
+      selected = { output, reused: true };
+      break;
+    }
+    continue;
+  }
   for (const file of receipt.files) {
     const bytes = await Deno.readFile(
       join(root, "extension_chrome", file.path),
@@ -95,17 +118,26 @@ if (created) {
     await Deno.mkdir(to.slice(0, to.lastIndexOf("/")), { recursive: true });
     await Deno.writeFile(to, bytes, { createNew: true });
   }
-  // Write the receipt last. Interrupted candidates remain intact and fail readback.
+  // Write the receipt last. Interrupted candidates are preserved and skipped.
   await Deno.writeFile(join(output, "receipt.json"), receiptBytes, {
     createNew: true,
   });
+  if (!await matches(output, receiptBytes)) {
+    throw Error("New candidate failed readback");
+  }
+  selected = { output, reused: false };
+  break;
 }
-await readback();
+if (!selected) {
+  throw Error(
+    `All ${maxCandidates} candidate slots are occupied or differ; existing candidates were preserved`,
+  );
+}
 console.log(JSON.stringify({
   project: receipt.project,
-  output,
+  output: selected.output,
   files: receipt.files.length,
   readback: "exact",
-  reused: !created,
+  reused: selected.reused,
   chromeId: receipt.chromeId,
 }));

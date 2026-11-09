@@ -29,6 +29,6 @@
     "public:prepare": "deno run --allow-read --allow-run=git --allow-write=Local scripts/public_prepare.ts --prepare",
     "maintenance": "deno task check && deno task package:test && deno task public:test && deno task public:check",
     "public:test": "deno test --allow-read --allow-write --allow-run=git,deno tests/public_prepare_test.ts",
-    "package:test": "deno test --allow-read --allow-write=Local --allow-run=deno tests/chrome_package_test.ts"
+    "package:test": "deno test --allow-read --allow-write=Local --allow-run=deno,ln tests/chrome_package_test.ts"
   }
 }

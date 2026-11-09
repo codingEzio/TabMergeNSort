@@ -16,7 +16,7 @@ Safari 功能限制：Apple 的
 
 安裝 Deno 2.x 與 Git，執行 `deno task check`、`deno task build`。檢查使用合成
 本機資料；建置只產生 `Local/candidates/` 候選套件，不安裝擴充或開啟瀏覽器。
-Chrome 建置僅在完整讀回一致時重用既有候選；衝突或中斷的候選會保留並報錯。
+Chrome 建置僅在完整讀回一致時重用既有候選；衝突或中斷的候選會保留，另試新目錄，最多 32 個。
 共用相依由 `dependencies.lock.json` 固定，日常建置不讀取相鄰專案。
 
 更新相依時先修改其來源專案，再明確執行

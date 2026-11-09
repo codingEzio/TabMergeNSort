@@ -35,8 +35,8 @@ deno task build
 
 Checks use synthetic local fixtures. Build writes a verified Chrome candidate
 under ignored `Local/candidates/`; it does not install or open a browser. Existing
-candidates are reused only after exact readback; conflicts or interrupted candidates
-fail without overwriting them.
+candidates are reused only after exact readback. Conflicting or interrupted
+candidates are preserved while another slot is tried, up to 32 slots.
 `extension_chrome/` owns the editable runtime. `shared/`, `vendor/` and the
 entries in `dependencies.lock.json` are pinned generated inputs. Ordinary
 checks/builds use those local inputs and do not read sibling checkouts.

@@ -46,24 +46,10 @@ Deno.test("Chrome package retains its reachable resources without unused font in
         stdout: "piped",
         stderr: "piped",
       }).output();
-    const attempts = await Promise.all([runPackage(), runPackage()]);
-    const created = attempts.filter((attempt) => attempt.success).map((
-      attempt,
-    ) => JSON.parse(new TextDecoder().decode(attempt.stdout).trim()));
-    assertEquals(
-      created.filter((attempt) => !attempt.reused).length,
-      1,
-      "exactly one creator",
-    );
-    for (const attempt of attempts.filter((attempt) => !attempt.success)) {
-      assertEquals(
-        new TextDecoder().decode(attempt.stderr).includes(
-          "Candidate is incomplete",
-        ),
-        true,
-      );
-    }
-    const result = created.find((attempt) => !attempt.reused);
+    const command = await runPackage();
+    if (!command.success) throw Error(new TextDecoder().decode(command.stderr));
+    const result = JSON.parse(new TextDecoder().decode(command.stdout).trim());
+    assertEquals(result.reused, false);
     const packageRoot = join(result.output, "extension_chrome");
     const receipt = JSON.parse(
       await Deno.readTextFile(join(result.output, "receipt.json")),
@@ -166,6 +152,10 @@ Deno.test("Chrome package retains its reachable resources without unused font in
                 )
               }`,
             );
+          } else if (entry.isSymlink) {
+            result.push(
+              `link:${name}:${await Deno.readLink(join(path, entry.name))}`,
+            );
           } else throw Error("Unexpected candidate entry");
         }
       }
@@ -173,53 +163,112 @@ Deno.test("Chrome package retains its reachable resources without unused font in
       return result.sort();
     };
     await Deno.writeTextFile(receiptPath, "conflicting receipt");
-    let before = await snapshot(result.output);
-    let conflict = await runPackage();
-    assertEquals(conflict.success, false);
-    assertEquals(
-      new TextDecoder().decode(conflict.stderr).includes(
-        "Candidate receipt differs",
-      ),
-      true,
-    );
-    assertEquals(
-      await snapshot(result.output),
-      before,
-      "conflicting candidate changed",
-    );
-    await Deno.writeFile(receiptPath, originalReceipt);
-    const manifestPath = join(packageRoot, "manifest.json");
-    const originalManifest = await Deno.readFile(manifestPath);
-    await Deno.writeTextFile(manifestPath, "changed candidate");
-    before = await snapshot(result.output);
-    conflict = await runPackage();
-    assertEquals(conflict.success, false);
-    assertEquals(
-      new TextDecoder().decode(conflict.stderr).includes(
-        "Candidate file differs",
-      ),
-      true,
-    );
+    const originalConflict = await snapshot(result.output);
+    const protectedDir = join(fixture, "protected");
+    await Deno.mkdir(protectedDir);
+    await Deno.writeTextFile(join(protectedDir, "sentinel"), "preserve");
+    const link = await new Deno.Command("ln", {
+      args: ["-s", await Deno.realPath(protectedDir), `${result.output}-01`],
+    }).output();
+    if (!link.success) throw Error("Could not create synthetic symlink");
+    const attempts = await Promise.all([runPackage(), runPackage()]);
+    for (const attempt of attempts) {
+      if (!attempt.success) {
+        throw Error(new TextDecoder().decode(attempt.stderr));
+      }
+    }
     assertEquals(
       await snapshot(result.output),
-      before,
+      originalConflict,
+      "old candidate changed",
+    );
+    assertEquals(
+      await Deno.readTextFile(join(protectedDir, "sentinel")),
+      "preserve",
+    );
+    assertEquals((await Deno.lstat(`${result.output}-01`)).isSymlink, true);
+    const alternate = await runPackage();
+    if (!alternate.success) {
+      throw Error(new TextDecoder().decode(alternate.stderr));
+    }
+    const selected = JSON.parse(new TextDecoder().decode(alternate.stdout));
+    assertEquals(selected.reused, true);
+    assertEquals(selected.output === result.output, false);
+    const selectedReceipt = await Deno.readFile(
+      join(selected.output, "receipt.json"),
+    );
+    assertEquals(
+      await Deno.readFile(receiptPath),
+      new TextEncoder().encode("conflicting receipt"),
+    );
+    assertEquals(selectedReceipt.length > 0, true);
+
+    const selectedManifest = join(
+      selected.output,
+      "extension_chrome",
+      "manifest.json",
+    );
+    await Deno.writeTextFile(selectedManifest, "changed candidate");
+    const changedCandidate = await snapshot(selected.output);
+    const afterChange = await runPackage();
+    if (!afterChange.success) {
+      throw Error(new TextDecoder().decode(afterChange.stderr));
+    }
+    const replacement = JSON.parse(
+      new TextDecoder().decode(afterChange.stdout),
+    );
+    assertEquals(replacement.output === selected.output, false);
+    assertEquals(
+      await snapshot(selected.output),
+      changedCandidate,
       "changed file was overwritten",
     );
-    await Deno.writeFile(manifestPath, originalManifest);
-    await Deno.remove(manifestPath);
-    before = await snapshot(result.output);
-    conflict = await runPackage();
-    assertEquals(conflict.success, false);
     assertEquals(
-      new TextDecoder().decode(conflict.stderr).includes(
-        "Candidate is incomplete",
-      ),
+      await snapshot(result.output),
+      originalConflict,
+      "old candidate changed",
+    );
+
+    await Deno.remove(
+      join(replacement.output, "extension_chrome", "manifest.json"),
+    );
+    const incomplete = await snapshot(replacement.output);
+    const afterIncomplete = await runPackage();
+    if (!afterIncomplete.success) {
+      throw Error(new TextDecoder().decode(afterIncomplete.stderr));
+    }
+    const complete = JSON.parse(
+      new TextDecoder().decode(afterIncomplete.stdout),
+    );
+    assertEquals(complete.output === replacement.output, false);
+    assertEquals(
+      await snapshot(replacement.output),
+      incomplete,
+      "incomplete candidate changed",
+    );
+
+    // All occupied or incomplete slots must fail without deleting or overwriting them.
+    for (let index = 1; index < 32; index++) {
+      const path = `${result.output}-${String(index).padStart(2, "0")}`;
+      try {
+        await Deno.mkdir(path);
+      } catch (error) {
+        if (!(error instanceof Deno.errors.AlreadyExists)) throw error;
+      }
+    }
+    // Make the last complete candidate incompatible, so no slot can be reused.
+    await Deno.writeTextFile(join(complete.output, "receipt.json"), "occupied");
+    const fullBefore = await snapshot(join(fixture, "Local/candidates"));
+    const full = await runPackage();
+    assertEquals(full.success, false);
+    assertEquals(
+      new TextDecoder().decode(full.stderr).includes("All 32 candidate slots"),
       true,
     );
     assertEquals(
-      await snapshot(result.output),
-      before,
-      "incomplete candidate changed",
+      await snapshot(join(fixture, "Local/candidates")),
+      fullBefore,
+      "full slots changed",
     );
     completed = true;
     console.log(
